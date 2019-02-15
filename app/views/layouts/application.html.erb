@@ -12,6 +12,34 @@
   </head>
 
   <body>
+    <div class="navbar-wagon navbar-fixed-top">
+  <!-- Logo -->
+      <a href="/cocktails" class="navbar-wagon-brand">
+        <%= cl_image_tag("1015956-200",
+      width: 50, height: 50) %>
+      </a>
+
+      <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+        <a href="/cocktails#cards" class="navbar-wagon-item navbar-wagon-link">See all</a>
+        <a href="/cocktails/new" class="navbar-wagon-item navbar-wagon-link">Create new cocktail</a>
+
+      </div>
+
+      <!-- Dropdown appearing on mobile only -->
+      <div class="navbar-wagon-item hidden-md hidden-lg">
+        <div class="dropdown">
+          <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="/cocktails#cards">See all</a></li>
+            <li><a href="/cocktails/new">Create new cocktail</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->

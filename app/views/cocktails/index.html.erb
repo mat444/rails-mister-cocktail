@@ -1,14 +1,24 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path('banner.jpg') %>');">
+<div class="banner">
+  <video autoplay muted loop id="myVideo">
+    <source src="https://res.cloudinary.com/dlndjcc7h/video/upload/v1550221578/Three-Cocktails.mp4" type="video/mp4">
+  </video>
   <div class="container">
     <h1>Intense #RAVINE </h1>
     <p>pour les amoureux de la liche.</p>
-    <%= link_to "Create new cocktail", new_cocktail_path, class: "btn btn-default" %>
   </div>
 </div>
 
+
+<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path('banner.jpg') %>');">
+  <div class="container">
+    <h1>Intense #RAVINE </h1>
+    <p>pour les amoureux de la liche.</p>
+  </div>
+</div> -->
+
 <div class="wrapper">
   <div class="container">
-    <div class="cards">
+    <div class="cards" id="cards">
       <% @cocktails.each do |cocktail| %>
         <% if cocktail.photo.file.nil? %>
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
