@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+
+.wrapper {
+  background-color: rgb(230, 230, 230);
+}
+
+.wrapper .container {
+    max-width: 700px;
+  }
+
+.cards {
+  margin: 20px 0px;
+}
